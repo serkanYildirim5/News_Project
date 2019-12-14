@@ -1,0 +1,54 @@
+﻿@model News_Project.UI.Models.WriterModel
+@{
+    ViewBag.Title = "Writer";
+    Layout = "~/Views/Shared/_LayoutControlPanel.cshtml";
+}
+
+<body id="main">
+
+   
+
+    <main >
+        @using (Html.BeginForm("NewsAdd", "Archive", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            
+            <div class="adjoined-bottom">
+                <div class="grid-container">
+                    <div class="grid-width-100" style="margin-top: 150px;">
+                       News Title: @Html.TextBoxFor(model => model.NewsTitle, new { style = "width:350px;" })
+                    </div>
+                    <div class="grid-width-100" >
+                   News Page: @Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple" })
+                        @Html.ValidationMessageFor(model => model.files, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="grid-width-100">
+                     News Category: @Html.DropDownListFor(x => x.News.CategoryId, Model.CategoryList)
+                    </div>
+                    <div class="grid-width-100">
+                        News Content
+                        @Html.TextAreaFor(model => model.NewsContent, new { @id = "editor" })
+                    </div>
+                    <div class="grid-width-100">
+                        <input type="submit" value="Add" class="genric-btn success center-block">
+                    </div>
+                </div>
+              
+            </div>
+          
+                   
+                   
+               
+                    
+                
+
+        }
+    </main>
+    <div>
+        <h3>@ViewBag.Kayit</h3>
+    </div>
+    
+    <script>
+        initSample();
+    </script>
+
+</body>

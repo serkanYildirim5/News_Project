@@ -1,0 +1,13 @@
+﻿@model News_Project.Entity.Model.Comment
+@using (Html.BeginForm("CommentUpdate", "NewsView", FormMethod.Post))
+{
+
+    <td>@Html.TextBoxFor(a => a.CommentId, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.CommentTitle, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.CommentContent, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.FullName, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.CreateDate, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.HaberId, new { @class = "form-control", @value = " " })</td>
+    <td><input type="submit" value="Edit" class="btn btn-primary btn-xs"></td>
+    
+}

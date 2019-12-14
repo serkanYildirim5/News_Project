@@ -1,0 +1,12 @@
+﻿@model News_Project.Entity.Model.User
+@using (Html.BeginForm("UserUpdate", "Login", FormMethod.Post))
+{
+
+    <td>@Html.TextBoxFor(a => a.UserId, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.FullName, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.Mail, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.Password, new { @class = "form-control", @value = " " })</td>
+    <td>@Html.TextBoxFor(a => a.RoleId, new { @class = "form-control", @value = " " })</td>
+    <td><input type="submit" value="Edit" class="btn btn-primary btn-xs"></td>
+    
+}
